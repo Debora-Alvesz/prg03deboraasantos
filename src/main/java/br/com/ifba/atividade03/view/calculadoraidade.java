@@ -8,14 +8,14 @@ package br.com.ifba.atividade03.view;
  *
  * @author Débora Alves
  */
-public class calculadoraidade extends javax.swing.JFrame {
+public class CalculadoraIdade extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(calculadoraidade.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CalculadoraIdade.class.getName());
 
     /**
-     * Creates new form calculadoraidade
+     * Creates new form CalculadoraIdade
      */
-    public calculadoraidade() {
+    public CalculadoraIdade() {
         initComponents();
     }
 
@@ -149,7 +149,7 @@ public class calculadoraidade extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new calculadoraidade().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new CalculadoraIdade().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
