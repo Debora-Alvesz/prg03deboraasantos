@@ -32,9 +32,9 @@ public class CalculadoraIdade extends javax.swing.JFrame {
         subtrair = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtAnoNascimento = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
         resultado = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,20 +55,9 @@ public class CalculadoraIdade extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
         resultado.setText("0");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\João Paulo\\Documents\\projetos\\prg03deboraasantos\\src\\main\\java\\br\\com\\ifba\\atividade03\\images\\java.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\João Paulo\\Documents\\NetBeansProjects\\prg03deboraasantos\\src\\main\\java\\br\\com\\ifba\\atividade03\\images\\java.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,10 +79,12 @@ public class CalculadoraIdade extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,16 +97,13 @@ public class CalculadoraIdade extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(24, 24, 24)
                 .addComponent(subtrair)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(resultado))
-                        .addGap(96, 96, 96))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(resultado))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(62, 62, 62))
         );
 
         pack();
@@ -123,15 +111,16 @@ public class CalculadoraIdade extends javax.swing.JFrame {
 
     @SuppressWarnings("UseSpecificCatch")
     private void subtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtrairActionPerformed
-        // Lê o texto digitado no campo txtAnoNascimento e converte para inteiro
         Object idade = 0;
         try {
+            // Lê o texto digitado no campo txtAnoNascimento e converte para inteiro
             int anonascimento = Integer.parseInt(txtAnoNascimento.getText());
-            
+            //Verifica se é um inteiro
             if (anonascimento % 1 == 0){
                 idade = 2025 - anonascimento;
             }
         } catch(NumberFormatException e) {
+            // Se o texto não for um número, mostra mensagem de erro
             idade = "Digite um valor numérico";
         }
        
@@ -171,7 +160,7 @@ public class CalculadoraIdade extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel resultado;
     private javax.swing.JButton subtrair;
     private javax.swing.JTextField txtAnoNascimento;
